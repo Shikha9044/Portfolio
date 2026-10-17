@@ -1,0 +1,1934 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap');
+
+/* ==========================================================
+   Shikha Agrahari Portfolio — Luxury Monochrome Noir Theme
+   Matches Image 2 (laugon.com) aesthetic, typography & layout
+   ========================================================== */
+
+:root {
+  --bg-black: #000000;
+  --bg-card: #121212;
+  --bg-card-hover: #181818;
+  --text-white: #ffffff;
+  --text-muted: #8a8a8a;
+  --text-sub: #b3b3b3;
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.35);
+  --accent-white: #ffffff;
+
+  --color-1: #000000;
+  --color-2: #121212;
+  --color-3: #8a8a8a;
+  --color-4: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-black) !important;
+  color: var(--text-muted);
+  font-family: 'Edu QLD Hand', cursive, sans-serif !important;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.big, .big-4,
+.hero-name,
+.hero-role h2,
+.hero-role h3,
+.editorial-brand,
+.panel-title,
+.heading-section h1,
+.heading-section h2,
+.resume-wrap h2,
+.project-card h3,
+.contact-title,
+.subheading,
+.dual-title,
+.dual-heading,
+.dual-card-title,
+.info-title,
+.visual-degree-code,
+p, a, span, button, input, textarea, li {
+  font-family: 'Edu QLD Hand', cursive, sans-serif !important;
+}
+
+/* ==========================================================
+   EDITORIAL NAVBAR (Matching Image 2)
+   ========================================================== */
+.editorial-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 24px 50px;
+  transition: all 0.35s ease;
+  background: transparent;
+}
+
+.editorial-navbar.scrolled {
+  background: rgba(8, 8, 8, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 16px 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.editorial-navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.editorial-brand {
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  color: var(--text-white) !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ==========================================================
+   STYLISH SA MONOGRAM LOGO
+   ========================================================== */
+.stylish-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+.stylish-sa-badge {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #202020 0%, #060606 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.sa-text {
+  font-family: 'Edu QLD Hand', cursive, sans-serif !important;
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.sa-glow-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  transition: all 0.35s ease;
+}
+
+.stylish-logo-link:hover .stylish-sa-badge {
+  border-color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.35), inset 0 1px 3px rgba(255, 255, 255, 0.4);
+}
+
+.stylish-logo-link:hover .sa-glow-ring {
+  inset: -6px;
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+}
+
+.stylish-logo-link:hover .sa-text {
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.95);
+}
+
+.editorial-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.editorial-nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+  cursor: pointer;
+}
+
+.editorial-nav-link:hover,
+.editorial-nav-link.active {
+  color: var(--text-white);
+}
+
+.editorial-toggler {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-white);
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .editorial-navbar {
+    padding: 16px 25px;
+  }
+  .editorial-navbar.scrolled {
+    padding: 14px 25px;
+  }
+  .editorial-toggler {
+    display: block;
+  }
+  .editorial-nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    right: 20px;
+    background: #111111;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 20px;
+    flex-direction: column;
+    gap: 16px;
+    display: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  }
+  .editorial-nav-menu.open {
+    display: flex;
+  }
+}
+
+/* ==========================================================
+   EDITORIAL HERO SECTION (Matching Reference Image)
+   ========================================================== */
+.editorial-hero {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000000 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.editorial-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/shikha_hero_wide.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Atmospheric subtle edge blending */
+.editorial-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    transparent 20%,
+    transparent 60%,
+    rgba(0, 0, 0, 0.75) 85%,
+    #000000 100%
+  );
+  pointer-events: none;
+}
+
+.editorial-hero-spacer {
+  flex-grow: 1;
+  min-height: 55vh;
+}
+
+/* ==========================================================
+   HERO LEFT GREETING & POINTING ARROW (Matching Reference)
+   ========================================================== */
+.hero-left-greeting {
+  position: absolute;
+  left: clamp(24px, 4vw, 55px);
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  margin-bottom: 35px;
+}
+
+.greeting-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.greeting-intro {
+  font-family: 'Edu QLD Hand', cursive, sans-serif !important;
+  font-size: clamp(1.05rem, 1.4vw, 1.4rem);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.greeting-name {
+  font-family: 'Edu QLD Hand', cursive, sans-serif !important;
+  font-size: clamp(1.45rem, 2.1vw, 2.1rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.3px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+}
+
+.greeting-arrow-wrap {
+  margin-top: 6px;
+  margin-left: 0;
+  width: 270px;
+  height: 95px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.greeting-curved-arrow {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.9));
+}
+
+@media (max-width: 991px) {
+  .hero-left-greeting {
+    top: 25%;
+    left: 20px;
+  }
+  .greeting-intro {
+    font-size: 1.05rem;
+  }
+  .greeting-name {
+    font-size: 1.45rem;
+  }
+  .greeting-arrow-wrap {
+    width: 210px;
+    height: 75px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-left-greeting {
+    top: 20%;
+    left: 16px;
+  }
+  .greeting-intro {
+    font-size: 0.95rem;
+  }
+  .greeting-name {
+    font-size: 1.35rem;
+  }
+  .greeting-arrow-wrap {
+    width: 130px;
+    height: 60px;
+  }
+}
+
+.hero-greeting {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.hero-name {
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin: 0 0 8px 0;
+  line-height: 1.05;
+}
+
+.hero-typing-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.hero-dynamic-text {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.hero-blinking-cursor {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Bottom Row of Hero */
+.editorial-hero-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 30px 60px 40px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  z-index: 3;
+  border-top: 1px solid var(--border-subtle);
+  gap: 25px;
+}
+
+.hero-location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.location-icon {
+  color: var(--text-white);
+  font-size: 14px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.editorial-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-white);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.editorial-pill-btn:hover {
+  background: var(--text-white);
+  color: #000000;
+  border-color: var(--text-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+.editorial-pill-btn.primary {
+  background: var(--text-white);
+  color: #000000;
+  border-color: var(--text-white);
+  font-weight: 600;
+}
+
+.editorial-pill-btn.primary:hover {
+  background: #e5e5e5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
+}
+
+.hero-role {
+  text-align: right;
+}
+
+.hero-role h2 {
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  font-size: clamp(1.6rem, 2.6vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-white);
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.hero-role h3 {
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  font-size: clamp(1.2rem, 1.9vw, 1.9rem);
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.25;
+}
+
+@media (max-width: 991px) {
+  .editorial-hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 25px 35px;
+    gap: 20px;
+  }
+  .hero-role {
+    text-align: left;
+  }
+  .editorial-giant-title {
+    font-size: clamp(3rem, 14vw, 8rem);
+  }
+}
+
+/* ==========================================================
+   ABOUT SECTION
+   ========================================================== */
+.ftco-about {
+  background-color: var(--bg-black);
+  padding: 90px 0 70px !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+.img-about .overlay {
+  background: var(--bg-card);
+  padding: 35px;
+  border-radius: 16px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.about-mf .about-img img {
+  border-radius: 12px;
+  max-width: 100%;
+  filter: grayscale(100%) contrast(110%);
+  border: 1px solid var(--border-subtle);
+}
+
+.skill-mf .progress {
+  margin: 0.5rem 0 1.2rem 0;
+  border-radius: 6px;
+  height: 0.65rem;
+  background-color: #1e1e1e;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-mf .progress .progress-bar {
+  height: 100%;
+  background: var(--text-white);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+}
+
+.heading-section h1.big {
+  color: rgba(255, 255, 255, 0.04) !important;
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  font-weight: 900;
+}
+
+.heading-section h2 {
+  color: var(--text-white) !important;
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+.heading-section p {
+  color: var(--text-muted) !important;
+  font-size: 1.05rem;
+}
+
+.btn-primary {
+  background-color: var(--text-white) !important;
+  border-color: var(--text-white) !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  border-radius: 30px !important;
+  padding: 12px 28px !important;
+  transition: all 0.25s ease !important;
+}
+
+.btn-primary:hover {
+  background-color: #e5e5e5 !important;
+  color: #000000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================================
+   SECTION SEPARATOR & PARTITION LINE (Same as About border)
+   ========================================================== */
+.section-separator {
+  width: 100%;
+  height: 1px;
+  background: var(--border-subtle) !important;
+  border: none;
+  margin: 70px 0 !important;
+  display: block;
+  clear: both;
+}
+
+/* ==========================================================
+   RESUME SECTION
+   ========================================================== */
+#resume-section {
+  background-color: var(--bg-black);
+  padding: 90px 0 70px !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+.big-4 {
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  color: var(--text-white);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.underline {
+  width: 40px;
+  height: 2px;
+  background: var(--text-white);
+  margin-bottom: 25px;
+}
+
+/* ==========================================================
+   TWO-WAY ACCORDION PANELS (Tutorial 109 - MadeWithGSAP)
+   ========================================================== */
+.experience-wrapper {
+  margin-bottom: 50px;
+}
+
+.two-way-accordion-container {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+  height: 490px;
+  min-height: 490px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.two-way-panel {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+/* Inactive Collapsed Strip */
+.two-way-panel.collapsed {
+  flex: 0 0 75px;
+  min-width: 75px;
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 12px;
+  user-select: none;
+}
+
+.two-way-panel.collapsed:hover {
+  background: #171717;
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.two-way-panel.collapsed:hover .panel-collapsed-title {
+  color: #ffffff;
+}
+
+.two-way-panel.collapsed:hover .panel-collapsed-dot {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.panel-collapsed-num {
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.panel-collapsed-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: auto 0;
+  transition: color 0.3s ease;
+}
+
+.panel-collapsed-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Active Expanded Panel */
+.two-way-panel.expanded {
+  flex: 1 1 0%;
+  min-width: 0;
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  cursor: default;
+}
+
+.panel-expanded-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.panel-content-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.panel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.panel-duration {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.panel-title {
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  font-size: clamp(1.8rem, 2.6vw, 2.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  line-height: 1.15;
+}
+
+.panel-role {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  margin-bottom: 20px;
+}
+
+.panel-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.panel-bullet-item {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.panel-bullet-item::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.panel-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.panel-tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  font-weight: 500;
+  color: #cccccc;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .two-way-accordion-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+    gap: 12px;
+  }
+  .two-way-panel.collapsed {
+    flex: none;
+    width: 100%;
+    height: 60px;
+    min-width: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .panel-collapsed-title {
+    writing-mode: horizontal-tb;
+    transform: none;
+    margin: 0;
+  }
+  .two-way-panel.expanded {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+    padding: 25px 20px;
+  }
+}
+
+/* ==========================================================
+   DUAL STACK FLIP — EDUCATION SECTION (Tutorial 056 - MadeWithGSAP)
+   ========================================================== */
+.dual-stack-section {
+  margin: 30px 0 50px 0;
+  width: 100%;
+}
+
+.dual-stack-stage {
+  background: #090909;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 26px;
+  padding: 34px 34px 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  transition: border-color 0.3s ease;
+}
+
+.dual-stack-stage:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.dual-stage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.dual-stage-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+
+.dual-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+  display: inline-block;
+  animation: dualPulse 2s infinite ease-in-out;
+}
+
+@keyframes dualPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+.dual-gsap-tag {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #777777;
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dual-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dual-counter {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+.dual-counter-current {
+  color: var(--text-white);
+  font-size: 16px;
+}
+
+.dual-nav-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #141414;
+  color: var(--text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 15px;
+}
+
+.dual-nav-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
+
+.dual-arena {
+  perspective: 1200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  min-height: 430px;
+  padding: 10px 0;
+}
+
+.dual-deck {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  height: 420px;
+  transform-style: preserve-3d;
+}
+
+.dual-card {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  will-change: transform, opacity;
+  transform-origin: center center;
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dual-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+/* Left Stack: Visual Deck (Deck A) */
+.dual-card-visual {
+  background: radial-gradient(circle at top left, #1c1c1c 0%, #0c0c0c 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dual-card-visual::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.visual-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.visual-idx {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--text-white);
+  line-height: 1;
+}
+
+.visual-status-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+
+.visual-center-emblem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto 0;
+  position: relative;
+  z-index: 2;
+}
+
+.visual-icon-wrap {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.dual-card:hover .visual-icon-wrap {
+  transform: scale(1.08) rotate(4deg);
+}
+
+.visual-degree-code {
+  font-family: 'Edu QLD Hand', cursive, sans-serif !important;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.visual-specialization {
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.visual-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.visual-institution-name {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+
+.visual-location {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+/* Right Stack: Text + Detail Deck (Deck B) */
+.dual-card-info {
+  background: #111111;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.info-year-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.info-grade-pill {
+  font-size: 12px;
+  font-weight: 600;
+  color: #dcdcdc;
+  letter-spacing: 0.5px;
+}
+
+.info-title {
+  font-family: 'Edu QLD Hand', cursive, sans-serif !important;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+}
+
+.info-institution {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-sub);
+  margin-bottom: 14px;
+}
+
+.info-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.info-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-tag {
+  display: inline-block;
+  padding: 4px 11px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  font-size: 11px;
+  font-weight: 500;
+  color: #b0b0b0;
+}
+
+.dual-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.dual-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dual-dot.active {
+  width: 32px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 900px) {
+  .dual-arena {
+    flex-direction: column;
+    min-height: auto;
+    gap: 20px;
+  }
+  .dual-deck {
+    max-width: 100%;
+    height: 380px;
+  }
+  .dual-stack-stage {
+    padding: 24px 18px 30px;
+  }
+}
+
+/* ==========================================================
+   PROJECTS SECTION
+   ========================================================== */
+#project-section {
+  background-color: var(--bg-black);
+  padding: 90px 0 70px !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+.block-20 {
+  width: 100%;
+  height: 260px;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+  filter: grayscale(30%);
+}
+
+.block-20:hover {
+  filter: grayscale(0%);
+  border-color: var(--text-white);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+}
+
+.blog-entry {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.blog-entry:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-hover);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+}
+
+.blog-entry .heading a {
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  color: var(--text-white);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.blog-entry .heading a:hover {
+  color: var(--text-muted);
+}
+
+.blog-entry p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-links {
+  display: flex;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--text-white);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.project-link-btn:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* ==========================================================
+   PINNED SCROLL FAN — PROJECTS (Tutorial 076 - MadeWithGSAP)
+   ========================================================== */
+.pinned-fan-section {
+  width: 100%;
+  margin: 10px 0 30px 0;
+  position: relative;
+}
+
+.fan-stage-box {
+  background: #090909;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 26px;
+  padding: 34px 34px 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+  transition: border-color 0.3s ease;
+}
+
+.fan-stage-box:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.fan-stage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.fan-badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fan-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+  display: inline-block;
+  animation: fanPulse 2s infinite ease-in-out;
+}
+
+@keyframes fanPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+}
+
+.fan-badge-text {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-white);
+}
+
+.fan-gsap-tag {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #777777;
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.fan-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fan-ctrl-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #141414;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.fan-ctrl-btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: #1c1c1c;
+}
+
+.fan-ctrl-btn.active {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.fan-ctrl-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #141414;
+  color: var(--text-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.25s ease;
+}
+
+.fan-ctrl-icon-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Fan Stage & Deck */
+.fan-stage {
+  perspective: 1200px;
+  position: relative;
+  width: 100%;
+  height: 390px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 20px 0;
+  overflow: visible;
+}
+
+.fan-deck {
+  position: relative;
+  width: 220px;
+  height: 310px;
+  transform-style: preserve-3d;
+}
+
+.fan-card {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 220px;
+  height: 310px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform-origin: 50% 120%;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.fan-card:hover {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9), 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+.fan-card.selected {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95), 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.fan-card-img-wrap {
+  width: 100%;
+  height: 125px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fan-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.fan-card:hover .fan-card-img {
+  transform: scale(1.06);
+}
+
+.fan-card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.fan-card-stamp-wrap {
+  margin: 12px 0 auto 0;
+}
+
+.fan-card-city {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.fan-card-stamp {
+  font-family: 'Edu QLD Hand', cursive, sans-serif !important;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.fan-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fan-card-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.fan-card-view-text {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.fan-card:hover .fan-card-view-text {
+  color: #ffffff;
+}
+
+/* Selected Project Details Drawer Panel */
+.fan-project-details-panel {
+  margin-top: 25px;
+  padding: 30px;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  animation: fanFadeIn 0.35s ease;
+}
+
+@keyframes fanFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fan-details-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.fan-details-media {
+  width: 100%;
+}
+
+.fan-details-img-wrap {
+  width: 100%;
+  height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+  background: #050505;
+}
+
+.fan-details-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.fan-details-img-wrap:hover .fan-details-img {
+  transform: scale(1.04);
+}
+
+.fan-details-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fan-details-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.fan-details-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 14px;
+  border: 1px solid;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.fan-details-num {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+.fan-details-title {
+  font-family: 'Edu QLD Hand', cursive, sans-serif !important;
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+}
+
+.fan-details-tagline {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-sub);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.fan-details-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.fan-details-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.fan-details-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  font-weight: 500;
+  color: #cccccc;
+}
+
+.fan-details-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.fan-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.fan-action-btn.primary {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+}
+
+.fan-action-btn.primary:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+  color: #000000;
+}
+
+.fan-action-btn.secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.fan-action-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .fan-details-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .fan-details-img-wrap {
+    height: 180px;
+  }
+  .fan-stage-box {
+    padding: 24px 16px 30px;
+  }
+  .fan-stage {
+    height: 330px;
+  }
+  .fan-deck {
+    width: 170px;
+    height: 250px;
+  }
+  .fan-card {
+    width: 170px;
+    height: 250px;
+    padding: 12px;
+  }
+  .fan-card-img-wrap {
+    height: 95px;
+  }
+  .fan-card-stamp {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==========================================================
+   CONTACT SECTION
+   ========================================================== */
+#contact-section {
+  background-color: var(--bg-black);
+  padding: 90px 0 70px !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 30px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.contact-icon-box {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-card h3 {
+  font-family: 'Edu QLD Hand', cursive, sans-serif;
+  color: var(--text-white);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.contact-card p,
+.contact-card a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-card a:hover {
+  color: var(--text-white);
+}
+
+.contact-form-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 40px;
+  margin-top: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.contact-form .form-control {
+  background: #0d0d0d;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-white);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  background: #0d0d0d;
+  border-color: var(--text-white);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+  color: var(--text-white);
+  outline: none;
+}
+
+.contact-form .form-control::placeholder {
+  color: #555555;
+}
+
+.form-feedback.success {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--text-white);
+  color: var(--text-white);
+}
+
+/* ==========================================================
+   FOOTER SECTION
+   ========================================================== */
+.ftco-footer {
+  background: #050505;
+  border-top: 1px solid var(--border-subtle) !important;
+  padding: 60px 0 40px !important;
+  margin-top: 40px !important;
+  color: var(--text-muted);
+}
+
+.footer-social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social-icon:hover {
+  background: var(--text-white);
+  color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
