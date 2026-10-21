@@ -5,23 +5,23 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const SKILLS = [
-  { name: 'HTML 5', percent: 95, label: '90%' },
-  { name: 'CSS', percent: 85, label: '85%' },
-  { name: 'Java script', percent: 60, label: '60%' },
-  { name: 'SQL', percent: 85, label: '85%' },
-  { name: 'React.js', percent: 80, label: '80%' },
-  { name: 'MongoDB', percent: 70, label: '70%' }
+  { name: 'React.js & Next.js', percent: 92, label: '92%' },
+  { name: 'JavaScript & Python', percent: 88, label: '88%' },
+  { name: 'MERN Stack & Node.js', percent: 86, label: '86%' },
+  { name: 'REST APIs & Express.js', percent: 88, label: '88%' },
+  { name: 'MongoDB & PostgreSQL', percent: 82, label: '82%' },
+  { name: 'Tailwind CSS & CSS3', percent: 90, label: '90%' }
 ];
 
 const ABOUT_DETAILS = [
-  { label: 'Profile:', value: 'Web Devlopment & also exploring Data Analytics' },
-  { label: 'Domain:', value: 'Artificial intelligence & Machine learning' },
-  { label: 'Education:', value: 'Bachelor of Engineering' },
-  { label: 'Language:', value: 'English, Hindi' },
-  { label: 'BI Tools:', value: 'Microsoft Power BI, Looker' },
-  { label: 'Skills:', value: 'HTML ,CSS,DBMS ,bootstrap, javascript,Python,MongoDB,React.js' },
-  { label: 'Other Skills:', value: 'power bi ,Excel, sql, library of python Matplotlib' },
-  { label: 'Interest:', value: 'Gardening, Dancing, listening music, Drawing' }
+  { label: 'Profile:', value: 'Software Engineer (MERN Stack, React.js, Next.js)' },
+  { label: 'Education:', value: 'B.Tech in Computer Science and Engineering (CGPA: 7.91/10)' },
+  { label: 'College:', value: 'Allenhouse Institute of Technology, Kanpur' },
+  { label: 'Phone:', value: '+91-9044090276' },
+  { label: 'Email:', value: 'shikhaagrahari076@gmail.com' },
+  { label: 'Languages:', value: 'English, Hindi' },
+  { label: 'DevOps & Tools:', value: 'Docker, Kubernetes, CI/CD, Git, GitHub, Bitbucket, Amplitude, GA4, Clarity' },
+  { label: 'AI Tooling:', value: 'Claude, GitHub Copilot, AI-Assisted Coding & Test Generation' }
 ];
 
 export default function About() {
@@ -111,9 +111,9 @@ export default function About() {
                     <div className="col-sm-6 col-md-7">
                       <div className="about-info">
                         <p><span className="title-s font-weight-bold" style={{ color: '#fff' }}>Name: </span> <span>Shikha Agrahari</span></p>
-                        <p><span className="title-s font-weight-bold" style={{ color: '#fff' }}>Job Role: </span> <span>Web Devloper</span></p>
-                        <p><span className="title-s font-weight-bold" style={{ color: '#fff' }}>Experience: </span> <span>1 Inhouse intership</span></p>
-                        <p><span className="title-s font-weight-bold" style={{ color: '#fff' }}>Address: </span> <span>Kanpur, India</span></p>
+                        <p><span className="title-s font-weight-bold" style={{ color: '#fff' }}>Job Role: </span> <span>Software Engineer</span></p>
+                        <p><span className="title-s font-weight-bold" style={{ color: '#fff' }}>Experience: </span> <span>ReactJS Intern @ Unifers.ai & Blue Planet</span></p>
+                        <p><span className="title-s font-weight-bold" style={{ color: '#fff' }}>Address: </span> <span>Kanpur, Uttar Pradesh, India</span></p>
                       </div>
                     </div>
                   </div>
@@ -154,8 +154,7 @@ export default function About() {
                   <h2 className="mb-4">About Me</h2>
 
                   <p style={{ lineHeight: '1.8', color: 'var(--color-3)' }}>
-                    AS a Engineering Student have a 4years of comprehensive experience in the field of web development accompanied by a bachelor's degree in engineering.
-                    Proficient in making interactive interface with advance functionality for customer.
+                    Software Engineer with hands-on experience in the MERN stack, React.js, and Next.js, building responsive, scalable web applications with REST API integration. Skilled in debugging production issues, optimizing frontend performance, and using analytics tools (Amplitude, GA4, Clarity) to improve user experience.
                   </p>
 
                   <ul className="about-info mt-4 px-md-0 px-2" style={{ listStyle: 'none', paddingLeft: 0 }}>
@@ -182,7 +181,7 @@ export default function About() {
                   </p>
                   <p>
                     <a
-                      href="https://github.com/Shikha9044?tab=repositories"
+                      href="https://github.com/ShikhaAgrahari"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-primary py-3 px-4"

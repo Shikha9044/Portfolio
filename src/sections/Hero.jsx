@@ -95,7 +95,7 @@ export default function Hero() {
             <FaLinkedinIn /> LinkedIn
           </a>
           <a
-            href="https://github.com/Shikha9044?tab=repositories"
+            href="https://github.com/ShikhaAgrahari"
             target="_blank"
             rel="noopener noreferrer"
             className="editorial-pill-btn"
@@ -103,7 +103,8 @@ export default function Hero() {
             <FaGithub /> GitHub
           </a>
           <a
-            href="https://drive.google.com/drive/folders/1fJFElB-zwtJgS6QnCwHtL8P_DTUa_Da3"
+            href="/Shikha_Agrahari_Resume.pdf"
+            download="Shikha_Agrahari_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="editorial-pill-btn primary"
@@ -114,7 +115,7 @@ export default function Hero() {
 
         {/* Bottom Right: Headline Role (Matching Image 2 layout) */}
         <div className="hero-animate-item hero-role">
-          <h2>Web Developer</h2>
+          <h2>Software Engineer</h2>
         </div>
       </div>
     </section>

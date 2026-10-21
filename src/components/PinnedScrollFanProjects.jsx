@@ -284,7 +284,6 @@ export default function PinnedScrollFanProjects() {
         <div className="fan-badge-wrap">
           <span className="fan-pulse-dot"></span>
           <span className="fan-badge-text">Interactive Works</span>
-          <span className="fan-gsap-tag">GSAP Pinned Scroll Fan (076)</span>
         </div>
 
         {/* Controls: Play/Pause Auto Fan & Spread Toggle */}

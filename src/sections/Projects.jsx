@@ -11,7 +11,7 @@ export default function Projects() {
             <h1 className="big big-2">Projects</h1>
             <h2 className="mb-4">Featured Projects</h2>
             <p>
-              Interactive project showcase animated with GSAP radial fan physics. Click any card to inspect full details, tech stack, live demos, and source code.
+              Click any card to inspect full details, tech stack, live demos, and source code.
             </p>
           </div>
         </div>

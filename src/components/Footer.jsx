@@ -23,7 +23,7 @@ export default function Footer() {
                 <FaLinkedinIn />
               </a>
               <a
-                href="https://github.com/Shikha9044?tab=repositories"
+                href="https://github.com/ShikhaAgrahari"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-icon"

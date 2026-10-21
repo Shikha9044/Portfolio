@@ -10,44 +10,33 @@ const EXPERIENCES = [
   {
     id: 0,
     number: '01',
-    category: 'Internship',
-    company: 'Blue Planet Infosolutions Pvt Ltd',
-    role: 'Frontend Developer',
-    duration: 'Professional Internship',
+    category: 'Internship · On-Site',
+    company: 'Unifers.ai',
+    role: 'ReactJS Intern',
+    duration: 'June 2026 – Aug 2026',
     bullets: [
-      'Completed an internship where I gained hands-on experience in Frontend development and real-world project workflows.',
-      'Developed and improved web-based applications, participated in debugging, testing, and implementing modern features.',
-      'Collaborated with development teams to enhance system functionality while learning industry practices such as version control, problem solving, and agile development.'
+      'Built responsive UI components and managed application flows using React.js and Next.js.',
+      'Integrated REST APIs via Axios, handling requests, responses, loading states, and errors for reliable frontend-backend communication.',
+      'Implemented Cloudflare Turnstile bot protection on login/signup flows, integrating token verification with the backend.',
+      'Integrated Amplitude, GA4, and Microsoft Clarity to track user behavior and identify UI/UX issues.',
+      'Debugged API failures, authentication errors, CORS issues, and integration bugs using Chrome DevTools and backend logs, then optimized API interactions and tested across scenarios to improve performance and catch edge cases.'
     ],
-    tags: ['React.js', 'JavaScript', 'Frontend Development', 'Version Control', 'Agile']
+    tags: ['React.js', 'Next.js', 'REST APIs', 'Axios', 'Cloudflare Turnstile', 'Amplitude', 'GA4', 'Chrome DevTools']
   },
   {
     id: 1,
     number: '02',
-    category: 'In-House Training',
-    company: 'Allenhouse Institute of Technology',
-    role: 'Web Development Student Lead',
-    duration: 'CSE Department [AI & ML]',
+    category: 'Internship · Remote',
+    company: 'Blue Planet InfoSolutions Pvt. Ltd.',
+    role: 'Frontend Intern',
+    duration: 'June 2025 – Dec 2025',
     bullets: [
-      'Worked directly with the AIT-Coordinator of Computer Science and Engineering department.',
-      'Computer Science Engineering [Artificial Intelligence and Machine Learning] | Allen house institute of Technology.',
-      'Engineered interactive, dynamic web interfaces with advanced functionality for students and staff.'
+      'Reduced UI render time by 22% by optimizing reusable React components using memoization.',
+      'Identified and resolved 8+ UI bugs, improving application performance and overall stability.',
+      'Implemented Redux and Context API for scalable state management and collaborated via Bitbucket.',
+      'Collaborated with a team of 6–8 members to develop and deliver project features.'
     ],
-    tags: ['HTML5', 'CSS3', 'JavaScript', 'AI & ML', 'Web Design']
-  },
-  {
-    id: 2,
-    number: '03',
-    category: 'Practical Experience',
-    company: 'Data Analytics Practice',
-    role: 'Data Analyst',
-    duration: 'Self-Driven Practice & Projects',
-    bullets: [
-      "While I haven't had the opportunity to work as a data analyst in a formal setting, I have been deeply involved in self-driven projects and hands-on practice to develop my skills.",
-      'Through tools like Python, SQL, and Excel, I analyzed datasets, created visualizations, and derived actionable insights.',
-      'Analyzed public datasets on sales and customer trends to identify patterns and built interactive dashboards using modern analytical workflows.'
-    ],
-    tags: ['Python', 'SQL', 'Power BI', 'Tableau', 'Excel', 'Pandas']
+    tags: ['React.js', 'Redux', 'Context API', 'Performance Optimization', 'Memoization', 'Bitbucket', 'Agile']
   }
 ];
 
@@ -197,7 +186,8 @@ export default function Resume() {
           <div className="col-md-6 text-center gsap-resume-btn">
             <p>
               <a
-                href="https://drive.google.com/drive/folders/1fJFElB-zwtJgS6QnCwHtL8P_DTUa_Da3"
+                href="/Shikha_Agrahari_Resume.pdf"
+                download="Shikha_Agrahari_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary py-4 px-5"

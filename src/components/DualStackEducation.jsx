@@ -17,26 +17,26 @@ const EDUCATION_ITEMS = [
   {
     id: 0,
     number: '01',
-    status: 'In Progress · 2022 - 2026',
-    degree: 'Bachelor of Engineering (B.Tech)',
-    department: 'Computer Science & Engineering [AI & ML]',
+    status: 'Aug 2022 – June 2026',
+    degree: 'Bachelor of Technology (B.Tech)',
+    department: 'Computer Science and Engineering',
     institution: 'Allenhouse Institute of Technology',
-    location: 'Rooma, Kanpur, U.P.',
-    grade: 'First Class Distinction',
-    period: '2022 - 2026',
+    location: 'Kanpur, Uttar Pradesh',
+    grade: 'CGPA: 7.91 / 10',
+    period: 'Aug 2022 – June 2026',
     icon: FaCode,
-    crestCode: 'B.TECH CSE [AI & ML]',
-    crestSub: 'Artificial Intelligence & Machine Learning',
+    crestCode: 'B.TECH CSE',
+    crestSub: 'Computer Science & Engineering',
     emblemTag: 'AIT KANPUR',
     description:
-      'Pursuing Bachelor of Technology in Computer Science Engineering with specialization in Artificial Intelligence and Machine Learning. Building extensive hands-on expertise in algorithm design, intelligent models, and modern full-stack web applications.',
+      'Bachelor of Technology in Computer Science and Engineering with CGPA: 7.91/10. Strong foundations in Data Structures, Algorithms, OOPs, Software Development Life Cycle, Microservices Architecture, and Full-Stack MERN development.',
     tags: [
-      'Artificial Intelligence',
-      'Machine Learning',
+      'Computer Science & Engg',
+      'CGPA: 7.91/10',
       'Data Structures & Algorithms',
-      'Full-Stack Web Dev',
-      'Python & SQL',
-      'React.js'
+      'MERN Stack',
+      'RESTful APIs',
+      'Microservices'
     ]
   },
   {
@@ -347,7 +347,6 @@ export default function DualStackEducation() {
           <div className="dual-stage-badge">
             <span className="dual-pulse-dot"></span>
             <span>Academic Qualifications</span>
-            <span className="dual-gsap-tag">GSAP Dual-Stack Flip</span>
           </div>
 
           <div className="dual-controls">

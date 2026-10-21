@@ -98,7 +98,7 @@ export default function Contact() {
                 <FaMapMarkerAlt />
               </div>
               <h3 className="mb-2">Address</h3>
-              <p>Kanpur, India</p>
+              <p>Kanpur, Uttar Pradesh, India</p>
             </div>
           </div>
 
@@ -107,10 +107,15 @@ export default function Contact() {
               <div className="contact-icon-box">
                 <FaEnvelope />
               </div>
-              <h3 className="mb-2">Email Address</h3>
+              <h3 className="mb-2">Email & Phone</h3>
               <p>
                 <a href="mailto:shikhaagrahari076@gmail.com">
                   shikhaagrahari076@gmail.com
+                </a>
+              </p>
+              <p style={{ marginTop: '4px' }}>
+                <a href="tel:+919044090276" style={{ color: 'var(--color-4)', fontSize: '14px' }}>
+                  +91-9044090276
                 </a>
               </p>
             </div>
@@ -142,11 +147,11 @@ export default function Contact() {
               <h3 className="mb-2">GitHub</h3>
               <p>
                 <a
-                  href="https://github.com/Shikha9044?tab=repositories"
+                  href="https://github.com/ShikhaAgrahari"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  @Shikha9044
+                  @ShikhaAgrahari
                 </a>
               </p>
             </div>

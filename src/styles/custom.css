@@ -240,7 +240,7 @@ p, a, span, button, input, textarea, li {
   height: 100%;
   background-image: url('/assets/shikha_hero_wide.jpg');
   background-size: cover;
-  background-position: center 20%;
+  background-position: center center;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -253,9 +253,9 @@ p, a, span, button, input, textarea, li {
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.35) 0%,
-    transparent 20%,
-    transparent 60%,
-    rgba(0, 0, 0, 0.75) 85%,
+    transparent 18%,
+    transparent 65%,
+    rgba(0, 0, 0, 0.75) 88%,
     #000000 100%
   );
   pointer-events: none;
@@ -503,6 +503,9 @@ p, a, span, button, input, textarea, li {
 }
 
 @media (max-width: 991px) {
+  .editorial-hero-bg {
+    background-position: center 20%;
+  }
   .editorial-hero-bottom {
     flex-direction: column;
     align-items: flex-start;
@@ -514,6 +517,12 @@ p, a, span, button, input, textarea, li {
   }
   .editorial-giant-title {
     font-size: clamp(3rem, 14vw, 8rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .editorial-hero-bg {
+    background-position: center 20%;
   }
 }
 
